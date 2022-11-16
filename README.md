@@ -1,7 +1,7 @@
 ## KSHS~$_SHELL
 
 ### Learning Objectives
-> The goat of this project is to understand;
+> The goal of this project is to understand;
 * How a shell works
 * What a pid and a ppid is
 * How to manipulate the environment of the current process
@@ -21,7 +21,7 @@
 ### Builtins
 * ```exit``` built-in, that exits the shell
 * ```env``` built-in, that prints the current environment
-* ```setenv``` built-in Initialize a new environment variable, or modify an existing one
+* ```setenv``` built-in initializes a new environment variable, or modify an existing one
 * ```unsetenv``` built-in removes an envrionmental variable
 * ```cd``` changes directory
 * ```alias``` Prints a list of all aliases, one per line, in the form name='value'
