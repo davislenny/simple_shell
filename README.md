@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## KSHS~$_SHELL
 
 ### Learning Objectives
@@ -66,3 +67,9 @@ KSHS~$ exit
 
 ### Authors
 youngspeculator		Davislenny
+=======
+# KSHS~$_SHELL
+****#### love Nairobi
+
+
+>>>>>>> 1cd9ebdfb3edf84232576e2155958fcb4b723a8b
