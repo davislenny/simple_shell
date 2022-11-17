@@ -39,13 +39,27 @@ KSHS~$
 ## Testing
 Non-Interactive Mode
 ```
-echo "ls -l" | ./simple_shell
+#csifun$ echo "ls -l" | ./hsh
+hsh main.c shell.c test_ls_2
+#cisfun$
+#cisfun cat test_ls_2
+/bin/ls
+/bin/ls
+#cisfun$
+#cisfun$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
+#cisfun$
 ```
 Interactive Mode
 
 ```
-#cisfun$ ./simple_shell
-KSK~$
+#cisfun$ ./hsh
+KSHS~$ /bin/ls
+hsh main.c shell.c
+KSHS~$
+KSHS~$ exit
+#cisfun$
 ```
 Sample Usage
 ```
@@ -60,7 +74,7 @@ KSHS~$ man ./man_1_simple_shell (opens our manpage for more information)
 Stop and return to your original shell
 ```
 KSHS~$ exit
-(your_terminal)$
+#cisfun$
 ```
 
 
