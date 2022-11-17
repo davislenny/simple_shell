@@ -61,21 +61,6 @@ KSHS~$
 KSHS~$ exit
 #cisfun$
 ```
-Sample Usage
-```
-KSK~$ ls -al
-total 4
--rw-rw-r-- 1 vagrant vagrant   234 Mar 28 19:32 file1.c
--rw-rw-r-- 1 vagrant vagrant    69 Mar 28 19:32 file2.c
-KSK~$ echo "This is a pretty cool!"
-This is pretty cool!
-KSHS~$ man ./man_1_simple_shell (opens our manpage for more information)
-```
-Stop and return to your original shell
-```
-KSHS~$ exit
-#cisfun$
-```
 
 
 ### Authors
