@@ -108,7 +108,7 @@ void remove_comments(char *buf)
  */
 int print_num(int num, int fd)
 {
-	int(*__putchar)(char) = _putchar;
+	int (*__putchar)(char) = _putchar;
 	int i, count = 0;
 	unsigned int _abs_, current;
 
