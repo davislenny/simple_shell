@@ -159,7 +159,7 @@ int _erratoi(char *);
 void print_error(info_t *, char *);
 char *convert_number(long int, int, int);
 void remove_comments(char *);
-int print_num(int, int)
+int print_num(int, int);
 
 /* builtin_func.c */
 int _myexit(info_t *);
