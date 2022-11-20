@@ -31,16 +31,19 @@ int _erratoi(char *s)
 /**
  * print_error - prints an error message
  * @info: the parameter & return info struct
- * @estr: string containing specified error type
+ * @errstr: string containing specified error message
  * Return: 0 if no numbers in string, converted number otherwise
  *        -1 on error
  */
-void print_error(info_t *info, char *estr)
+void print_error(info_t *info, char *errstr)
 {
-	_eputs("Error!: ");
-	_eputs(info->argv[0]);
+	_eputs(info->fname);/* the executable file */
 	_eputs(": ");
-	_eputs(estr);
+	print_num(info->line_count, STDERR_FILENO);
+	_eputs(": ");
+	_eputs(info->argv[0]);/* command name */
+	_eputs(": ");
+	_eputs(errstr);
 }
 
 /**
@@ -95,4 +98,41 @@ void remove_comments(char *buf)
 			buf[i] = '\0';
 			break;
 		}
+}
+
+/**
+ * print_num - printsnum in decimal
+ * @num: the number
+ * @fd: filedescriptor, where to write
+ * Return: number of chars printed
+ */
+int print_num(int num, int fd)
+{
+	int(*__putchar)(char) = _putchar;
+	int i, count = 0;
+	unsigned int _abs_, current;
+
+	if (fd == STDERR_FILENO)
+		__putchar = _eputchar;
+	if (num < 0)
+	{
+		_abs_ = -num;
+		__putchar('-');
+		count++;
+	}
+	else
+		_abs_ = num;
+	current = _abs_;
+	for (i = 1000000000; i > 1; i /= 10)
+	{
+		if (_abs_ / i)
+		{
+			__putchar('0' + current / i);
+			count++;
+		}
+		current %= i;
+	}
+	__putchar('0' + current);
+	count++;
+	return (count);
 }
